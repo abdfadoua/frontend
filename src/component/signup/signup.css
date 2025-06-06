@@ -1,0 +1,264 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.signup-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.signup-left, .signup-right {
+  flex: 1;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-left {
+  background-color: #fff;
+  margin-left: 5%;
+}
+
+.signup-right {
+  background-color: #fff;
+  align-items: center;
+  text-align: center;
+  margin-right: 5%;
+}
+
+.signup-logo {
+  width: 20%;
+  margin-bottom: 3%;
+  
+}
+.header{
+  display: flex
+;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 16%;
+}
+
+.signup-form label {
+  font-size: 13px;
+  color: #333;
+  text-align: left;
+}
+
+.signup-form input, .signup-form select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dial-code {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.phone-input input {
+  flex: 1;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.terms a {
+  color: #666;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+.signup-form button {
+  padding: 12px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.google-signup {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.google-signup p {
+  font-size: 14px;
+  color: #666;
+}
+
+.login-link {
+  font-size: 14px;
+  color: #666;
+  margin-top: 7px;
+}
+
+.login-link a {
+  color: #f5a623;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.form-image {
+  width: 100%;
+  
+  margin-bottom: 10px;
+}
+
+.signup-right h3 {
+  font-size: 28px;
+  color: #FFBF9F;
+  margin-bottom: 7px;
+}
+
+.signup-right p {
+  font-size: 13px;
+  color: #000000;
+  font-style: Lato;
+ 
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.multi-form{
+  display: flex;
+    align-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+/* Styles pour les centres d'intérêt */
+.interests-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.interest-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.interest-item input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.custom-interest {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.custom-interest input {
+  flex: 1;
+}
+
+.add-interest-btn {
+  background-color: #FFBF9F;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-interest-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.selected-interests {
+  margin-bottom: 15px;
+}
+
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.interest-tag {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.remove-interest {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style pour le champ de date de naissance */
+input[type="date"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  font-size: 14px;
+  width: 100%;
+}
+
+
+

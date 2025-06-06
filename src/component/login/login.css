@@ -1,0 +1,237 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+/* Container with two sections */
+.login-container {
+  display: flex
+;
+  min-height: 100vh;
+  align-content: center;
+  justify-content: center;
+}
+
+.login-left, .login-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-left {
+  background-color: #fff;
+  margin-left: 5%;
+  
+}
+
+.login-right {
+  background-color: #fff;
+  align-items: center;
+  text-align: center;
+  margin-right: 5%;
+}
+
+/* Logo styling */
+.login-logo {
+  
+  width: 28%;
+  margin-bottom: 47px;
+  margin-left: 50%;
+}
+
+/* Headings and paragraphs */
+h2 {
+  color: #3f51b5;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 5%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.form-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #f6b3ad;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: #e65a50;
+}
+
+/* Google login and footer */
+.google-login {
+  margin-top: 20px;
+}
+
+.login-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-footer a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the Forgot Password link (since it's now a span) */
+.forgot-password-link {
+  color: #3f51b5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* Error message */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Right section styling */
+.form-image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-right h3 {
+  font-size: 28px;
+  color: #FFBF9F;
+  margin-bottom: 10px;
+}
+
+.login-right p {
+  font-size: 13px;
+  color: #000000;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Popup styling for Forgot Password */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.popup-content h3 {
+  color: #3f51b5;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.popup-content input:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+.popup-content button {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.popup-content .form-button {
+  background-color: #f6b3ad;
+  color: white;
+}
+
+.popup-content .form-button:hover {
+  background-color: #e65a50;
+  transform: translateY(-2px);
+}
+
+.popup-content .close-button {
+  background-color: #ddd;
+  color: #333;
+}
+
+.popup-content .close-button:hover {
+  background-color: #ccc;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

@@ -1,0 +1,539 @@
+/* General Styles */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    padding-top: 0px;
+    margin: 0px 5% 13px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 20px; /* Reduced from 24px as per previous request */
+    margin: 0;
+    font-weight: 600;
+    color: #3b3b3b;
+    padding-top: 9px;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: -1%;
+  }
+  
+  .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-profile span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #3b3b3b;
+  }
+  
+  .dashboard-container {
+    position: relative;
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 280px;
+    height: calc(100vh - 40px);
+    background: #cfe2f3;
+    color: #3b3b3b;
+    padding: 40px;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .sidebar a {
+    color: #818181;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 12px 0;
+    gap: 10px;
+  }
+  
+  .sidebar a:hover {
+    background: #f9f8f8;
+    color: #FFBF9F;
+  }
+  
+  .sidebar a.active {
+    background: #f9f8f8;
+    color: #FFBF9F;
+  }
+  
+  .sidebar-logo {
+    width: 95%;
+    margin-bottom: 20px;
+    margin-left: -10px;
+  }
+  
+  .sidebar-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Logout Section */
+  .logout {
+    margin-top: auto;
+    width: 100%;
+  }
+  
+  .logout a {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #818181;
+    text-decoration: none;
+    gap: 10px;
+    background: none;
+    border: none;
+    width: 100%;
+  }
+  
+  .logout a:hover,
+  .logout a.active {
+    background: #f9f8f8;
+    color: #FFBF9F;
+  }
+  
+  .logout a svg {
+    fill: #818181;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .logout a:hover svg {
+    fill: #FFBF9F;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 340px; /* Updated as per previous request */
+    padding: 10px;
+    width: calc(100% - 380px); /* Updated as per previous request */
+    transition: margin-left 0.3s ease, width 0.3s ease;
+  }
+  
+  .main-content.shifted {
+    margin-left: 340px;
+  }
+  
+  .main-content.full-width {
+    margin-left: 0;
+    width: calc(100% - 40px);
+  }
+  
+  /* Tables Container */
+  .tables-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+  }
+  
+  /* Formation and Session Selection */
+  .formation-selection,
+  .session-selection {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .formation-selection label,
+  .session-selection label {
+    font-size: 14px;
+    color: #3b3b3b;
+    font-weight: 500;
+  }
+  
+  .formation-selection select,
+  .session-selection select {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #e0e0e0; /* Thin border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #ffffff;
+    color: #666;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .formation-selection select:disabled,
+  .session-selection select:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+  }
+  
+  /* Training Info Table */
+  .training-info {
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .training-info .registration-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 4px;
+    box-shadow: none;
+  }
+  
+  .training-info .registration-table th {
+    background-color: #ffffff;
+    color: #3B3B3B;
+    padding: 12px 16px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  
+  .training-info .registration-table td {
+    padding: 12px 16px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  
+  /* Rounded Corners for Table Cells */
+  .training-info .registration-table th:first-child {
+    border-top-left-radius: 10px;
+  }
+  
+  .training-info .registration-table th:last-child {
+    border-top-right-radius: 10px;
+  }
+  
+  .training-info .registration-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+  
+  .training-info .registration-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #cfe2f3;
+  }
+  
+  .skills-section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .skill-row {
+    margin-bottom: 20px;
+  }
+  
+  .skill-row label {
+    display: block;
+    font-size: 16px;
+    color: #3b3b3b;
+    margin-bottom: 10px;
+  }
+  
+  .slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .slider-container input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #FFBF9F;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .slider-container input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #FFBF9F;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .slider-container span {
+    font-size: 16px;
+    color: #3b3b3b;
+  }
+  
+  /* Toggle Progress Button */
+  .toggle-progress-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #FFBF9F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+
+  .toggle-progress-button:hover {
+    background: #f0ad7e;
+  }
+
+  .toggle-progress-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Sidebar Toggle */
+  .sidebar-toggle {
+    position: fixed;
+    top: 10%;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    background-color: #FFBF9F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: white;
+  }
+  
+  .sidebar-toggle:hover {
+    background-color: #f0ad7e;
+    transform: scale(1.05);
+  }
+  
+  .sidebar-toggle.open {
+    left: 302px;
+  }
+  
+  .sidebar-toggle.closed {
+    left: 15px;
+  }
+  
+  .sidebar.active {
+    left: 45px;
+  }
+  
+  .sidebar.inactive {
+    left: -280px;
+  }
+  
+  /* Validation Summary */
+  .validation-summary {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .validation-summary h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+  }
+  
+  .progress-container {
+    margin-top: 15px;
+  }
+  
+  .skill-progress {
+    margin-bottom: 20px;
+  }
+  
+  .skill-progress h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .percentage {
+    font-weight: bold;
+  }
+  
+  .progress-bars {
+    position: relative;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-before {
+    position: absolute;
+    height: 100%;
+    background-color: #ffc107;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s ease;
+  }
+  
+  .progress-after {
+    position: absolute;
+    height: 100%;
+    background-color: #28a745;
+    border-radius: 10px;
+    z-index: 1;
+    transition: width 0.5s ease;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 900px) {
+    .main-content {
+      margin-left: 0;
+      width: 100%;
+      padding: 20px;
+      padding-top: 80px;
+    }
+  
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      border-radius: 0;
+      margin: 0;
+      padding: 10px;
+      top: 0;
+      left: 0;
+    }
+  
+    .sidebar a {
+      padding: 10px;
+      font-size: 12px;
+    }
+  
+    .training-info .registration-table th,
+    .training-info .registration-table td {
+      font-size: 12px;
+      padding: 10px;
+    }
+  
+    .skills-section h2 {
+      font-size: 16px;
+    }
+  
+    .skill-row label {
+      font-size: 14px;
+    }
+  
+    .slider-container span {
+      font-size: 14px;
+    }
+  
+    .submit-button {
+      width: 150px;
+      font-size: 14px;
+    }
+  
+    .formation-selection,
+    .session-selection {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .formation-selection select,
+    .session-selection select {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar-toggle {
+      top: 15px;
+      left: 15px !important;
+    }
+  
+    .sidebar-toggle.open {
+      left: 15px !important;
+    }
+  
+    .main-content.full-width,
+    .main-content.shifted {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .sidebar.inactive {
+      left: -100%;
+    }
+  
+    .sidebar.active {
+      left: 0;
+      z-index: 999;
+    }
+  }
+  

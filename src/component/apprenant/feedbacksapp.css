@@ -1,0 +1,598 @@
+/* General Styles */
+.fb-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  padding-top: 0px;
+  margin: 0px 5% 13px;
+}
+
+.fb-dashboard-header h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+  color: #3b3b3b;
+  padding-top: 9px;
+}
+
+.fb-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.fb-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: -1%;
+}
+
+.fb-user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fb-user-profile span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3b3b3b;
+}
+
+.fb-dashboard-container {
+  position: relative;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+/* Sidebar */
+.fb-sidebar {
+  width: 280px;
+  height: calc(100vh - 40px);
+  background: #cfe2f3;
+  color: #3b3b3b;
+  padding: 40px;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+}
+
+.fb-sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.fb-sidebar a {
+  color: #818181;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 12px 0;
+  gap: 10px;
+}
+
+.fb-sidebar a:hover {
+  background: #f9f8f8;
+  color: #ffbf9f;
+}
+
+.fb-sidebar a.active {
+  background: #f9f8f8;
+  color: #ffbf9f;
+}
+
+.fb-sidebar-logo {
+  width: 95%;
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+
+.fb-sidebar-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Logout Section */
+.fb-logout {
+  margin-top: auto;
+  width: 100%;
+}
+
+.fb-logout a {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #818181;
+  text-decoration: none;
+  gap: 10px;
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.fb-logout a:hover,
+.fb-logout a.active {
+  background: #f9f8f8;
+  color: #ffbf9f;
+}
+
+.fb-logout a svg {
+  fill: #818181;
+  width: 20px;
+  height: 20px;
+}
+
+.fb-logout a:hover svg {
+  fill: #ffbf9f;
+}
+
+/* Main Content */
+.fb-main-content {
+  margin-left: 340px;
+  padding: 20px;
+  width: calc(100% - 340px);
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.fb-main-content.shifted {
+  margin-left: 340px;
+  width: calc(100% - 340px);
+}
+
+.fb-main-content.full-width {
+  margin-left: 60px;
+  width: calc(100% - 60px);
+}
+
+/* Tables Container */
+.fb-tables-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: none;
+}
+
+/* Formation Selection */
+.fb-formation-selection {
+  width: 150px;
+  margin-right: 30px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fb-formation-selection select {
+  flex: 1;
+  padding: 11px 7px;
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #666;
+  outline: none;
+  cursor: pointer;
+  width: 171px;
+}
+
+.fb-formation-selection select:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+/* Training Info Table */
+.fb-training-info {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+
+.fb-registration-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  box-shadow: none;
+}
+
+.fb-registration-table th {
+  background-color: #ffffff;
+  color: #3b3b3b;
+  padding: 12px 16px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.fb-registration-table td {
+  padding: 12px 16px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.fb-registration-table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.fb-registration-table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.fb-registration-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.fb-registration-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/* Smiley Image */
+.fb-smiley-img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Smiley Button */
+.fb-smiley-button {
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.fb-smiley-button:hover {
+  background-color: #f0f0f0;
+}
+
+.fb-smiley-button.selected {
+  background-color: #ffbf9f;
+  color: white;
+}
+
+.fb-smiley-button.selected::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  box-sizing: border-box;
+}
+
+.fb-smiley-button img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Evaluation Section */
+.fb-evaluation-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3b3b3b;
+  margin-bottom: 31px;
+  white-space: nowrap;
+}
+
+/* Textarea Styles */
+.comment-textarea {
+  width: 100%;
+  padding: 8px; /* Adjusted padding for the text input area */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.comment-textarea:focus {
+  border-color: #ffbf9f;
+  box-shadow: 0 0 0 2px rgba(255, 191, 159, 0.3);
+}
+
+/* Additional Section */
+.fb-additional-section {
+  width: 90%;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  border: none;
+}
+
+.fb-additional-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.fb-skill-row {
+  margin-bottom: 20px;
+}
+
+.fb-skill-row label {
+  display: block;
+  font-size: 16px;
+  color: #3b3b3b;
+  margin-bottom: 10px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-container input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  outline: none;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffbf9f;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-container input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffbf9f;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-container span {
+  font-size: 16px;
+  color: #3b3b3b;
+}
+
+/* Global Rating Slider */
+.fb-global-rating-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  outline: none;
+}
+
+.fb-global-rating-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffbf9f;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.fb-global-rating-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffbf9f;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.fb-submit-button {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #ffbf9f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.fb-submit-button:hover {
+  background: #f0ad7e;
+}
+
+/* Sidebar Toggle */
+.fb-sidebar-toggle {
+  position: fixed;
+  top: 10%;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  background-color: #ffbf9f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.fb-sidebar-toggle:hover {
+  background-color: #f0ad7e;
+  transform: scale(1.05);
+}
+
+.fb-sidebar-toggle.open {
+  left: 302px;
+}
+
+.fb-sidebar-toggle.closed {
+  left: 15px;
+}
+
+.fb-sidebar.active {
+  left: 45px;
+}
+
+.fb-sidebar.inactive {
+  left: -280px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .fb-main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+    padding-top: 80px;
+  }
+
+  .fb-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 0;
+    margin: 0;
+    padding: 10px;
+    top: 0;
+    left: 0;
+  }
+
+  .fb-sidebar a {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .fb-training-info .fb-registration-table th,
+  .fb-training-info .fb-registration-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .fb-additional-section h2 {
+    font-size: 16px;
+  }
+
+  .fb-skill-row label {
+    font-size: 14px;
+  }
+
+  .slider-container span {
+    font-size: 14px;
+  }
+
+  .fb-submit-button {
+    width: 150px;
+    font-size: 14px;
+  }
+
+  .fb-formation-selection {
+    flex-direction: row;
+    align-items: center;
+    width: 120px;
+    margin-right: 15px;
+  }
+
+  .fb-formation-selection select {
+    width: 120px;
+    padding: 3px 6px;
+  }
+
+  .fb-evaluation-section h3 {
+    font-size: 14px;
+  }
+
+  .comment-textarea {
+    padding: 6px; /* Slightly smaller padding for smaller screens */
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fb-sidebar-toggle {
+    top: 15px;
+    left: 15px !important;
+  }
+
+  .fb-sidebar-toggle.open {
+    left: 15px !important;
+  }
+
+  .fb-main-content.full-width,
+  .fb-main-content.shifted {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .fb-sidebar.inactive {
+    left: -100%;
+  }
+
+  .fb-sidebar.active {
+    left: 0;
+    z-index: 999;
+  }
+
+  .fb-formation-selection {
+    width: 100px;
+    margin-right: 10px;
+  }
+
+  .fb-formation-selection select {
+    width: 100px;
+  }
+
+  .fb-evaluation-section h3 {
+    font-size: 12px;
+  }
+
+  .comment-textarea {
+    padding: 5px; /* Even smaller padding for very small screens */
+    font-size: 12px;
+  }
+}

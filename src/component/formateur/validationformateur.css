@@ -1,0 +1,600 @@
+/* General Styles */
+.vf-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  padding-top: 0px;
+  margin: 40px 5% 13px;
+}
+
+.vf-dashboard-header h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+  color: #3b3b3b;
+  padding-top: 9px;
+}
+
+.vf-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.vf-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: -1%;
+}
+
+.vf-user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.vf-user-profile span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3b3b3b;
+}
+
+.vf-dashboard-container {
+  position: relative;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+/* Sidebar */
+.vf-sidebar {
+  width: 280px;
+  height: calc(100vh - 40px);
+  background: #cfe2f3;
+  color: #3b3b3b;
+  padding: 40px;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+}
+
+.vf-sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.vf-sidebar a {
+  color: #818181;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 12px 0;
+  gap: 10px;
+}
+
+.vf-sidebar a:hover {
+  background: #f9f8f8;
+  color: #ffbf9f;
+}
+
+.vf-sidebar a.active {
+  background: #f9f8f8;
+  color: #ffbf9f;
+}
+
+.vf-sidebar-logo {
+  width: 95%;
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+
+.vf-sidebar-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Logout Section */
+.vf-logout {
+  margin-top: auto;
+  width: 100%;
+}
+
+.vf-logout a {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #818181;
+  text-decoration: none;
+  gap: 10px;
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.vf-logout a:hover,
+.vf-logout a.active {
+  background: #f9f8f8;
+  color: #ffbf9f;
+}
+
+.vf-logout a svg {
+  fill: #818181;
+  width: 20px;
+  height: 20px;
+}
+
+.vf-logout a:hover svg {
+  fill: #ffbf9f;
+}
+
+/* Main Content */
+.vf-main-content {
+  margin-left: 340px;
+  padding: 10px;
+  width: calc(100% - 380px);
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.vf-main-content.shifted {
+  margin-left: 340px;
+}
+
+.vf-main-content.full-width {
+  margin-left: 0;
+  width: calc(100% - 40px);
+}
+
+/* Tables Container */
+.vf-tables-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: none;
+  margin-left: -52px;
+}
+
+/* Formation Selection */
+.vf-formation-selection {
+  width: 150px;
+  margin-right: 30px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.vf-formation-selection select {
+    flex: 1 1;
+    padding: 11px 7px;
+    font-size: 17px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #666;
+    outline: none;
+    cursor: pointer;
+    width: 225px;
+}
+
+.vf-formation-selection select:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+/* Training Info Table */
+.vf-training-info {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+
+.vf-registration-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  box-shadow: none;
+}
+
+.vf-registration-table th {
+  background-color: #ffffff;
+  color: #3b3b3b;
+  padding: 12px 16px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.vf-registration-table td {
+  padding: 12px 16px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.vf-registration-table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.vf-registration-table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.vf-registration-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.vf-registration-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/* Styles pour les icônes FontAwesome (smileys) */
+.vf-smiley-img {
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+/* Couleurs pastel claires pour chaque émoticône */
+.fa-face-angry.vf-smiley-img {
+  color: #ffadad; /* Rouge pastel clair */
+}
+
+.fa-face-frown.vf-smiley-img {
+  color: #ffd6a5; /* Orange pastel clair */
+}
+
+.fa-face-meh.vf-smiley-img {
+  color: #fdffb6; /* Jaune pastel clair */
+}
+
+.fa-face-smile.vf-smiley-img {
+  color: #caffbf; /* Vert pastel clair */
+}
+
+.fa-face-grin-beam.vf-smiley-img {
+  color: #9bf6ff; /* Bleu pastel clair */
+}
+
+/* Animation au survol */
+.vf-smiley-img:hover {
+  transform: scale(1.2);
+}
+
+/* Style pour les boutons de smiley */
+.vf-smiley-button {
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.vf-smiley-button:hover {
+  background-color: transparent;
+}
+
+/* Style pour les boutons sélectionnés - suppression du fond */
+.vf-smiley-button.selected {
+  background-color: transparent;
+}
+
+/* Couleurs pastel pour les boutons sélectionnés selon l'émoticône */
+.vf-smiley-button.selected .fa-face-angry {
+  color: #ff6b6b; /* Rouge pastel plus foncé quand sélectionné */
+}
+
+.vf-smiley-button.selected .fa-face-frown {
+  color: #ffa94d; /* Orange pastel plus foncé quand sélectionné */
+}
+
+.vf-smiley-button.selected .fa-face-meh {
+  color: #ffec5e; /* Jaune pastel plus foncé quand sélectionné */
+}
+
+.vf-smiley-button.selected .fa-face-smile {
+  color: #8ce99a; /* Vert pastel plus foncé quand sélectionné */
+}
+
+.vf-smiley-button.selected .fa-face-grin-beam {
+  color: #66d9e8; /* Bleu pastel plus foncé quand sélectionné */
+}
+
+/* Style pour les cercles de notation dans les cellules */
+.vf-rating-circle {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+/* Couleurs spécifiques pour les cercles sélectionnés selon la position */
+.vf-smiley-button.rating-1.selected .vf-rating-circle {
+  background-color: #ffadad; /* Rouge pastel clair */
+}
+
+.vf-smiley-button.rating-2.selected .vf-rating-circle {
+  background-color: #ffd6a5; /* Orange pastel clair */
+}
+
+.vf-smiley-button.rating-3.selected .vf-rating-circle {
+  background-color: #fdffb6; /* Jaune pastel clair */
+}
+
+.vf-smiley-button.rating-4.selected .vf-rating-circle {
+  background-color: #caffbf; /* Vert pastel clair */
+}
+
+.vf-smiley-button.rating-5.selected .vf-rating-circle {
+  background-color: #9bf6ff; /* Bleu pastel clair */
+}
+
+/* Ajustement pour que les smileys dans l'en-tête soient bien visibles */
+.vf-registration-table th .vf-smiley-img {
+  font-size: 1.5rem;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Evaluation Section */
+.vf-evaluation-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3b3b3b;
+  margin-bottom: 31px;
+  white-space: nowrap;
+}
+
+/* Textarea Styles */
+.vf-comment-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.vf-comment-textarea:focus {
+  border-color: #ffbf9f;
+  box-shadow: 0 0 0 2px rgba(255, 191, 159, 0.3);
+}
+
+/* Additional Section */
+.vf-additional-section {
+  width: 90%;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  border: none;
+}
+
+.vf-additional-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.vf-skill-row {
+  margin-bottom: 20px;
+}
+
+.vf-skill-row label {
+  display: block;
+  font-size: 16px;
+  color: #3b3b3b;
+  margin-bottom: 10px;
+}
+
+/* Submit Button */
+.vf-submit-button {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #ffbf9f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.vf-submit-button:hover {
+  background: #f0ad7e;
+}
+
+/* Sidebar Toggle */
+.vf-sidebar-toggle {
+  position: fixed;
+  top: 10%;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  background-color: #ffbf9f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.vf-sidebar-toggle:hover {
+  background-color: #f0ad7e;
+  transform: scale(1.05);
+}
+
+.vf-sidebar-toggle.open {
+  left: 302px;
+}
+
+.vf-sidebar-toggle.closed {
+  left: 15px;
+}
+
+.vf-sidebar.active {
+  left: 45px;
+}
+
+.vf-sidebar.inactive {
+  left: -280px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .vf-main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+    padding-top: 80px;
+  }
+
+  .vf-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 0;
+    margin: 0;
+    padding: 10px;
+    top: 0;
+    left: 0;
+  }
+
+  .vf-sidebar a {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .vf-training-info .vf-registration-table th,
+  .vf-training-info .vf-registration-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .vf-additional-section h2 {
+    font-size: 16px;
+  }
+
+  .vf-skill-row label {
+    font-size: 14px;
+  }
+
+  .vf-submit-button {
+    width: 150px;
+    font-size: 14px;
+  }
+
+  .vf-formation-selection {
+    flex-direction: row;
+    align-items: center;
+    width: 120px;
+    margin-right: 15px;
+  }
+
+  .vf-formation-selection select {
+    width: 120px;
+    padding: 3px 6px;
+  }
+
+  .vf-evaluation-section h3 {
+    font-size: 14px;
+  }
+
+  .vf-comment-textarea {
+    padding: 6px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vf-sidebar-toggle {
+    top: 15px;
+    left: 15px !important;
+  }
+
+  .vf-sidebar-toggle.open {
+    left: 15px !important;
+  }
+
+  .vf-main-content.full-width,
+  .vf-main-content.shifted {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .vf-sidebar.inactive {
+    left: -100%;
+  }
+
+  .vf-sidebar.active {
+    left: 0;
+    z-index: 999;
+  }
+
+  .vf-formation-selection {
+    width: 100px;
+    margin-right: 10px;
+  }
+
+  .vf-formation-selection select {
+    width: 100px;
+  }
+
+  .vf-evaluation-section h3 {
+    font-size: 12px;
+  }
+
+  .vf-comment-textarea {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+
+
