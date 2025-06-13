@@ -244,29 +244,33 @@ font-size: 16px;
 
 /* Learner List */
 .learner-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
   max-height: 600px;
   overflow-y: auto;
   padding-right: 10px;
   width: 100%;
 }
 
-/* Learner Card */
+/* Ajuster le style des cartes pour qu'elles fonctionnent bien en grille */
 .learner-card {
   background-color: #fff;
   border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 15px;
-  margin-bottom: 15px;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
   min-height: 80px;
-  position: relative;
+}
+
+/* Améliorer l'effet de survol */
+.learner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .learner-image {
@@ -795,5 +799,18 @@ font-size: 16px;
   .edit-modal-content {
     width: 95%;
   }
+
+  .learner-list {
+    grid-template-columns: 1fr;
+  }
 }
+
+/* Responsive design pour la grille */
+@media (max-width: 768px) {
+  .learner-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 

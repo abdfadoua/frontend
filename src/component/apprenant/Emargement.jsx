@@ -531,7 +531,7 @@ const Emargement = () => {
       {isPopupOpen && (
         <div className="popup-overlay">
           <div className="popup-content">
-            <h2>Electronic attendance</h2>
+            <h2>Signature Eléctronique</h2>
             <p>
               {new Date(
                 sessions
@@ -557,7 +557,7 @@ const Emargement = () => {
                 minute: '2-digit',
               })}
             </p>
-            <p>You are about to digitally certify your attendance for a training slot via an electronic signature.</p>
+            <p>Vous êtes sur le point de certifier numériquement votre présence à une session de formation via une signature électronique.</p>
             <SignatureCanvas
               canvasProps={{ width: 300, height: 150, className: 'signature-canvas' }}
               ref={(ref) => (signatureRefs.current[isPopupOpen] = ref)}
@@ -573,13 +573,13 @@ const Emargement = () => {
                   .find((session) => session.id === isPopupOpen)?.isEmargedByUser
               }
             />
-            <p>Please sign above, using your mouse or finger, as neatly as possible!</p>
+            <p>Veuillez signer ci-dessus, avec votre souris ou votre doigt, aussi lisiblement que possible !</p>
             {signatures[isPopupOpen] && (
               <img src={signatures[isPopupOpen]} alt="Signature" className="signature-preview" />
             )}
             <div className="popup-buttons">
-              <button onClick={() => handleClear(isPopupOpen)}>Delete</button>
-              <button onClick={() => handleSubmit(isPopupOpen)}>I certify my attendance for this slot</button>
+              <button onClick={() => handleClear(isPopupOpen)}>Supprimer</button>
+              <button onClick={() => handleSubmit(isPopupOpen)}>Je certifie ma présence pour cette session.</button>
             </div>
             <button className="close-button" onClick={() => setIsPopupOpen(null)}>×</button>
           </div>

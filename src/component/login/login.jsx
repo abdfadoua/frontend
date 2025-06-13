@@ -28,6 +28,16 @@ const Login = () => {
         password,
       });
 
+      // Vérifier si la réponse indique que le PIN a été envoyé
+      if (response.data.message && response.data.message.includes('PIN envoyé')) {
+        // Afficher le formulaire de saisie du PIN
+        setShowPinInput(true);
+        setError('');
+        setIsLoading(false);
+        return;
+      }
+
+      // Si nous arrivons ici, c'est que le serveur a renvoyé un token directement
       localStorage.setItem('token', response.data.accessToken);
       localStorage.setItem('role', response.data.role);
       localStorage.setItem('userId', response.data.userId);
@@ -238,3 +248,4 @@ const Login = () => {
 };
 
 export default Login;
+

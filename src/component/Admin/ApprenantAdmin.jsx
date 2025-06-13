@@ -15,6 +15,8 @@ import trainersIcon from "../assets/coach.png";
 import statsIcon from "../assets/Chart.png";
 import historyIcon from "../assets/history.png";
 import AdminSidebar from "./AdminSidebar";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LearnerManagement = () => {
   const [userData, setUserData] = useState(null);
@@ -189,8 +191,12 @@ const LearnerManagement = () => {
       } else if (error.response?.status === 401) {
         toast.error("Non autorisé. Veuillez vous reconnecter.");
         navigate("/login");
+      } else if (error.response?.status === 403) {
+        toast.error("Vous n'avez pas les droits pour effectuer cette action.");
+      } else if (error.response?.status === 500) {
+        toast.error("Erreur serveur. Contactez l'administrateur.");
       } else {
-        toast.error("Erreur lors de la suppression de l'apprenant.");
+        toast.error(`Erreur lors de la suppression de l'apprenant: ${error.message}`);
       }
     }
   };
@@ -311,9 +317,10 @@ const LearnerManagement = () => {
         return;
       }
 
+      // Modifier l'URL pour correspondre à l'endpoint du backend
       await axios.post(
-        `http://localhost:5000/api/requests/${requestId}/approve`,
-        {},
+        `http://localhost:5000/api/participant-requests/${requestId}/respond`,
+        { status: "APPROVED" },
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -705,11 +712,28 @@ const LearnerManagement = () => {
           </div>
         )}
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
 
 export default LearnerManagement;
+
+
+
+
+
+
 
 
 

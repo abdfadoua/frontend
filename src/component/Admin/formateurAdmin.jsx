@@ -5,7 +5,8 @@ import "./formateurAdmin.css";
 import AdminSidebar from "./AdminSidebar";
 import profilePic from "../assets/profil.png";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { getImageUrl, getInitials, handleImageError } from "../../utils/imageUtils";
@@ -112,9 +113,24 @@ const FormateurAdmin = () => {
       });
       setTrainers(trainers.filter((trainer) => trainer.id !== userId));
       toast.success("Formateur supprimé avec succès.");
+      // Ajout du tracking comme dans ApprenantAdmin
+      if (typeof lytic !== 'undefined') {
+        lytic.track("delete_trainer");
+      }
     } catch (error) {
       console.error("Erreur lors de la suppression:", error);
-      toast.error("Erreur lors de la suppression du formateur.");
+      if (error.response?.status === 404) {
+        toast.error("Le formateur n'existe pas.");
+      } else if (error.response?.status === 401) {
+        toast.error("Non autorisé. Veuillez vous reconnecter.");
+        navigate("/login");
+      } else if (error.response?.status === 403) {
+        toast.error("Vous n'avez pas les droits pour effectuer cette action.");
+      } else if (error.response?.status === 500) {
+        toast.error("Erreur serveur. Contactez l'administrateur.");
+      } else {
+        toast.error(`Erreur lors de la suppression du formateur: ${error.message}`);
+      }
     }
   };
 
@@ -164,6 +180,12 @@ const FormateurAdmin = () => {
       toast.error("Erreur lors de la mise à jour du formateur.");
     }
   };
+
+  // Ajoutez ceci dans un useEffect pour tester
+  useEffect(() => {
+    // Test simple pour vérifier si les toasts fonctionnent
+    toast.success("Test de notification toast");
+  }, []);
 
   return (
     <div className="formateur-admin-container">
@@ -317,11 +339,32 @@ const FormateurAdmin = () => {
           </div>
         )}
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
 
 export default FormateurAdmin;
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -216,8 +216,10 @@ p {
 }
 
 .popup-content .close-button {
-  background-color: #ddd;
-  color: #333;
+    background-color: #e63d3d;
+    color: #fffbfb;
+    width: 42px;
+    border-radius: 9px;
 }
 
 .popup-content .close-button:hover {
